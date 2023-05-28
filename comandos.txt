@@ -1,0 +1,22 @@
+docker container -> cria container
+docker container run <imagem> -> roda container
+docker run <imagem> -> mesma coisa que de cima
+docker container ls -> lista containers ativos
+docker container ps -> lista containers ativos
+docker container ls -a -> lista todos containers
+docker run --name <nome> <imagem> -> roda um container com nome 
+docker run --rm --name <nome> <imagem> -> roda um container com nome e remove ele no final
+docker container run -it <imagem> <processo> -> roda um container no modo interativo
+docker container run -d <image> -> roda em background
+docker container exec -it <id> -> entra no container
+docker container run -d -p 8080:80 <imagem> -> faz o binding da porta 8080 da sua máquina com a 80 do container
+docker image prune -> deleta todas as imagens
+docker login -> autentica com dockerhub
+docker push <imagem> -> faz o upload da imagem para o docker hub
+docker container rm $(docker container ls -qa) -> remove todos os containers
+docker logs <id container>
+
+docker build -t <nome-imagem>  [<diretório contexto> | -f <nome do arquivo>] -> cria uma imagem a partir de um dockerfile
+ex.: docker build -t daniel/aula-ubuntu-curl:v1 -f Dockerfile
+
+docker tag <image> <imagem:latest> -> cria uma nova tag para aquela imagem

@@ -1,0 +1,8 @@
+FROM ubuntu
+RUN apt update
+RUN apt install curl -y
+
+# juntar um comando força que ele seja executado sem cache
+
+# RUN apt update && apt install curl -y
+
