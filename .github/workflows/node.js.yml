@@ -35,3 +35,12 @@ jobs:
       - run: 
           cd src; 
           npm test
+      - name: Cria imagem docker
+        uses: docker/build-push-action@v4.0.0
+        with:
+          context: src
+          file: src/Dockerfile
+          push: false
+          tags: |
+              daniel/imagem-teste:v1
+              
