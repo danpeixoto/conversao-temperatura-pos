@@ -28,5 +28,10 @@ jobs:
       - run: 
           cd src;
           npm ci;
-      - run: npm run build --if-present
-      - run: npm test
+      - run: 
+          cd src;
+          npm run build --if-present
+
+      - run: 
+          cd src; 
+          npm test
